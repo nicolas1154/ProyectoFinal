@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import "./juegos.css";
+import "./trabajadores.css";
 import { request } from "../helper/helper";
 import DataGrid from "../grid/grid";
 
@@ -26,10 +26,6 @@ const columns = [
         dataField: "telefono",
         text: "Telefono",
     },
-    {   
-        dataField: "mail",
-        text: "Correo Electronico",
-    },
     {
         dataField: "direccion",
         text: "Direccion",
@@ -37,7 +33,7 @@ const columns = [
 
     
 ]
-export default class JuegosBuscar extends React.Component {
+export default class TrabajadoresBuscar extends React.Component {
 constructor(props) {
     super(props);
     this.state = {};
@@ -56,12 +52,12 @@ componentDidMount(){
 render() {
     
     return (
-    <Container id="juegos-buscar-container">
+    <Container id="trabajadores-buscar-container">
         <Row>
         <h1>Buscar Juegos</h1>
         </Row>
         <Row>
-            <DataGrid url="/juegos" columns={ columns}/> 
+            <DataGrid url="/trabajadores" columns={ columns}/> 
         
         </Row>
     </Container>
