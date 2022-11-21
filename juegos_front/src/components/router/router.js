@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from '../login/login';
 import Inicio from '../index/index';
 import PrivateRoute from '../auth/privaterouter';
-import Juegos from "../juegos/juegos.buscar"
+import Trabajadores from "../trabajadores/trabajadores.buscar"
 
 export default function AppRoutes(){
 
@@ -11,7 +11,7 @@ export default function AppRoutes(){
         <Router>
             <Switch>
                 
-            <PrivateRoute exact path={ [ "/juegos" ] } component={ Juegos } />
+            <PrivateRoute exact path={ [ "/trabajadores" ] } component={ Trabajadores } />
                 <Route exact path={ ["/login" ] } component={ Login } />
                 <Route exact path={ ["/", "/index" ] } component={ Inicio } />
                 <Route path={ "*" } component={ () => (

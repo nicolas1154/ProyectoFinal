@@ -27,6 +27,10 @@ const columns = [
         text: "Telefono",
     },
     {
+        dataField: ",mail",
+        text: "Email",
+    },
+    {
         dataField: "direccion",
         text: "Direccion",
     },
@@ -54,7 +58,7 @@ render() {
     return (
     <Container id="trabajadores-buscar-container">
         <Row>
-        <h1>Buscar Juegos</h1>
+        <h1>Buscar Trabajadores</h1>
         </Row>
         <Row>
             <DataGrid url="/trabajadores" columns={ columns}/> 

@@ -6,7 +6,6 @@ import {
   DropdownButton,
   Dropdown,
   Row,
-  Col
 } from "react-bootstrap";
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

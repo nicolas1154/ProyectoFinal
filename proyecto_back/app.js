@@ -5,11 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var database = require("./config/database")
 var auth = require("./auth/main_auth")
-var cors = require ('cors')
+var cors = require('cors');
 
 
 var trabajadoresRouter = require('./routes/trabajadores.router');
-var usuarios_juegosRouter = require('./routes/usuarios_juegos.router');
+var usuariosRouter = require('./routes/usuarios.router')
 var juegosRouter = require ('./routes/juegos.router')
 
 
@@ -26,9 +26,9 @@ app.use(cors())
 //mongo connectionx
 database.mongoConnect();
 
-app.use('/usuarios_juegos', usuarios_juegosRouter);
+app.use('/usuarios', usuariosRouter);
 
-app.use(auth)
+app.use(auth);
 
 //router
 app.use('/trabajadores', trabajadoresRouter);
