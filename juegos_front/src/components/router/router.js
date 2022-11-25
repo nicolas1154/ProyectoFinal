@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from '../login/login';
 import Inicio from '../index/index';
 import PrivateRoute from '../auth/privaterouter';
-import Trabajadores from "../trabajadores/trabajadores.buscar"
+import Trabajadores from "../trabajadores/iniciot";
 
 export default function AppRoutes(){
 

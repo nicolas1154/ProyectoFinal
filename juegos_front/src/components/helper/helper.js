@@ -33,8 +33,24 @@ export const request = {
     let token = renovarSesion();
     return axios.get(`${APIHOST}${services}`, {
         headers: {
-            Autorization: `Bearer ${token}`,
+            Authorization: `Bearer ${token}`,
         }
     });
+    },
+    post: function (services, data){
+        let token = renovarSesion();
+        return axios.post(`${APIHOST}${services}`, data,{
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+    },
+    put: function (services, data){
+        let token= renovarSesion();
+        return axios.put(`${APIHOST}${services}`, data, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
     },
     };
